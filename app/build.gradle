@@ -1,0 +1,25 @@
+apply plugin: 'com.android.application'
+
+android {
+    buildToolsVersion "27.0.3"
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt')
+        }
+    }
+    compileSdkVersion 27
+    dataBinding {
+        enabled true
+    }
+    defaultConfig {
+        applicationId "edu.missouri.mca.android.practice1"
+        minSdkVersion 21
+        targetSdkVersion 26
+        versionCode 100
+        versionName "0.1.0"
+    }
+}
+
+dependencies {
+}
