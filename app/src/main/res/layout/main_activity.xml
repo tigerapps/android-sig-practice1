@@ -54,6 +54,7 @@
             android:layout_below="@+id/text_password"
             android:layout_centerHorizontal="true"
             android:layout_margin="16dp"
+            android:onClick="onButtonPressed"
             android:text="@string/login" />
     </RelativeLayout>
 </layout>

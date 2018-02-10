@@ -2,5 +2,6 @@
     <string name="app_name">Practice 1</string>
     <string name="email">Email</string>
     <string name="login">Login</string>
+    <string name="message">Hello, %s!</string>
     <string name="password">Password</string>
 </resources>
