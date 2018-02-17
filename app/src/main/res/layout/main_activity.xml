@@ -3,12 +3,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="edu.missouri.mca.android.practice1.MainActivity">
 
+    <data>
+
+        <variable
+            name="activity"
+            type="edu.missouri.mca.android.practice1.MainActivity" />
+
+        <variable
+            name="model"
+            type="edu.missouri.mca.android.practice1.Model" />
+    </data>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="16dp">
 
         <TextView
+            android:id="@+id/heading"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_above="@+id/text_email_label"
@@ -30,7 +42,8 @@
             android:layout_height="wrap_content"
             android:layout_above="@+id/text_password"
             android:layout_marginBottom="16dp"
-            android:inputType="textEmailAddress" />
+            android:inputType="textEmailAddress"
+            android:text="@={model.email}" />
 
         <TextView
             android:layout_width="match_parent"
@@ -45,7 +58,8 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginBottom="16dp"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:text="@={model.password}" />
 
         <Button
             android:id="@+id/button_login"
@@ -54,7 +68,7 @@
             android:layout_below="@+id/text_password"
             android:layout_centerHorizontal="true"
             android:layout_margin="16dp"
-            android:onClick="onButtonPressed"
+            android:onClick="@{activity::onButtonPressed}"
             android:text="@string/login" />
     </RelativeLayout>
 </layout>
